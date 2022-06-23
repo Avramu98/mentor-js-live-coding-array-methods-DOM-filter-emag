@@ -1,145 +1,145 @@
-//PRIMITIVE
-// String, number, boolean, null, undefined
+// console.log('this is array');
 
-let stringVar = "test";
-let numberVar = 4;
-let booleanVar = true;
-let undefinedVar;
-let nullVar = null;
-
-//NON-PRIMITIVE
-
-// let person = {
-//   name: "Avram", //PROPERTIES
-//   age: 24,
-//   startWalking: function () {
-//     //METHOD
-//     console.log("starts walking");
-//   },
-//   startWalkingSecond: () => {
-//     console.log("starts walking 2");
-//   },
-// };
-
-let secondArray = [1, 2, 3, 4];
-
-let array = [
-  stringVar,
-  numberVar,
-  booleanVar,
-  undefinedVar,
-  nullVar,
-//   person,
-  secondArray,
-];
-// console.log(array);
-// console.log(array[0]);
-
-// ES5
-// function testFunction() {
-//     console.log('this is test function')
-// }
-
-// testFunction();
-
-// ES6
-// let testFunction = () => {
-//     console.log('this is test function')
-// }
-
-// testFunction();
-let nameVariable = "Avram";
-let ageVariable = 24;
-
-let sayMyName = (name, age) => {
-  // console.log('Hello my name is ' + name + ' and i am ' + age + ' years old');
-//   console.log(`Hello my name is ${name} and i am ${age} years old`);
-};
-
-sayMyName(nameVariable, ageVariable);
-
-// console.log(2 === "2");
-
-// console.log(2 + 2 == 4);
-
-// if(2 + 2 == 4) {
-//     console.log('expresia este adevarata')
+// if(true) {
+//     console.log('this is true')
 // } else {
-//     console.log('expresia este falsa')
+//     console.log('this is false')
 // }
 
-let fruits = ["apple", "mango", "orange"];
-// console.log(fruits[0]);
-// console.log(fruits[1]);
-// console.log(fruits[2]);
+// Ternary operator
 
-// console.log(fruits.length)
+// let name = 'Vlad';
 
-// let i = 0;
-// i++;
+// name == 'Vlad' ? console.log('numele este vlad') : console.log('numele nu este vlad');
 
-for (let i = 0; i < fruits.length; i++) {
-  // console.log(`hello world ${i}`);
-  // console.log(`Elementul ${fruits[i]} se afla pe pozitia ${i}`)
-  // console.log(i);
-}
+// Array
 
-// fruits.map(function(fruit) {
-//     console.log(fruit)
-// })
+const fruits = ['mango', 'apple', 1, 2, 3,4, 5, 6, 5, 'orange'];
 
+//Adauga elementul la coada array-ului
+// fruits.push('strawberry');
 
+// fruits.splice(1, 0, 'strawberry')
+// fruits.splice(1, 0, 'strawberry')
 
-// let a = fruits.map(function() {
+// fruits.pop();
 
-// })
-
+// fruits.splice(1, 2);
 
 // fruits.map((fruit, i) => {
-//   console.log(`Elementul ${fruit} se afla pe pozitia ${i}`);
-// });
-
-
-// let person = {
-//     name: 'Avram',
-//     age: 24,
-//     getAge: () => {
-//         console.log(`I am ${age} years old, and i will be ${++age}`)
+//     if(fruit === 5) {
+//         fruits.splice(i, 1);
 //     }
-// }
+// })
 
-// let { name, age, getAge } = person;
-// console.log(name, age);
 
-// getAge();
+// console.log(fruits);
 
-// console.log(person.name);
-// console.log(person.age);
+const companies = [
+    { name: "Company One", category: "Finance", start: 1981, end: 2003 },
+    { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+    { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
+    { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
+    { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
+    { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
+    { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
+    { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
+    { name: "Company Nine", category: "Retail", start: 1981, end: 1989 },
+  ];
 
-let createPerson = (name, age) => {
-    let a = 4;
-    console.log('testing stuff')
+// let companiesName = [];
 
-    //BEFORE RETURN IT WORKS
-    console.log(a);
+ for(let i=0; i < companies.length; i++) {
+    // companiesName.push(companies[i].name)
+  }
 
-    let person = {
+// let companiesNames = companies.map((company) => {
+//     return company.name
+// })
+
+let companiesTest = companies.map((company) => {
+    const { name, category } = company;
+    return {
+        // name: company.name,
+        // category: company.category
         name,
-        age,
+        category
     }
+})
 
-    return person;
+// let calculateYears = companies.map((company) => {
+//     return {
+//         years: `Compania a tinut ${company.end - company.start} ani`
+//     }
+// })
 
-    //AFTER RETURN NOTHING WORKS
-    console.log(a);
+// console.log(calculateYears);
 
-   
+// let companiesNames = companies.forEach((company, i) => {
+//     let companyNameEl = document.createElement('div');
+//     companyNameEl.innerHTML = company.name;
+//     document.body.appendChild(companyNameEl);
+
+//     // return company.name
+// })
+
+// let companiesNames = companies.map((company) => {
+//     return company.name
+// })
+
+// let companiesNames = companies.forEach((company) => {
+//     console.log(company.name)
+//     return company.name
+// })
+
+// console.log(companiesNames)
+
+// console.log(companiesNames);
+
+// let financeCompanies = companies.filter((company)=> {
+//     return company.category === "Finance" && company.start > 1990
+// })
+
+// console.log(financeCompanies);
+
+let companiesListElement = document.getElementById('companies-list');
+
+let createListElements = (companiesArrayList) => {
+    companiesListElement.innerHTML = "";
+    companiesArrayList.forEach((company) => {
+        let companyElement = document.createElement('li');
+        companiesListElement.appendChild(companyElement);
+        companyElement.innerHTML = `Name: ${company.name} | Category: ${company.category}`
+    })
 }
 
-let person1 = createPerson('Vlad', 24);
-let person2 = createPerson('Ion', 60);
+let getFinanceCompanies = () => {
+    let companiesCategory = companies.filter((company) => {
+        return company.category === 'Finance'
+    })
+    createListElements(companiesCategory);
+}
 
-// console.log(person1);
-// console.log(person2);
 
-// let person1 = createPersons
+let getRetailCompanies = () => {
+    let companiesCategory = companies.filter((company) => {
+        return company.category === 'Retail'
+    })
+    createListElements(companiesCategory);
+}
+
+let getAutoCompanies = () => {
+    let companiesCategory = companies.filter((company) => {
+        return company.category === 'Auto'
+    })
+    createListElements(companiesCategory);
+}
+
+let getTechnologyCompanies = () => {
+    let companiesCategory = companies.filter((company) => {
+        return company.category === 'Technology'
+    })
+    createListElements(companiesCategory);
+}
+
+createListElements(companies);
