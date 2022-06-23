@@ -1,0 +1,12 @@
+#container {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-container {
+    border: 1px solid black;
+    min-width: 300px;
+}
